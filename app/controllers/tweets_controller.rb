@@ -14,6 +14,7 @@ class TweetsController < ApplicationController
     def create
         @tweet = Current.user.tweets.create(tweet_params)
         if @tweet.save
+            #TweetJob.set(wait_until: @tweet.publish_at).perform_later(@tweet)
             rediret_to tweets_path, notice: "Tweet was scheduled successfully"
        else
            render :new
@@ -25,6 +26,7 @@ class TweetsController < ApplicationController
 
     def update
         if @tweet.update(tweet_params)
+          #TweetJob.set(wait_until: @tweet.publish_at).perform_later(@tweet)
           redirect_to tweets_path, notice: "Tweet was updated successfully"
         else
           render :edit
