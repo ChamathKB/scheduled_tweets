@@ -1,5 +1,7 @@
 # Scheduled Tweets
 
+https://app.travis-ci.com/ChamathKB/scheduled_tweets.svg?branch=main
+
 Ruby on rails app to schedul tweets.
 
 ## Main Components
