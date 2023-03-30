@@ -1,24 +1,37 @@
-# README
+# Scheduled Tweets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on rails app to schedul tweets.
 
-Things you may want to cover:
+## Main Components
+ - Ruby on rails 
+ - js, html, css with Bootstrap
+ - Sidekiq
+ - Sqlite
+ - postgresql
+ - redis
+ - Twitter API 
 
-* Ruby version
+Ruby version - 2.7.0
 
-* System dependencies
+## Setup
+```
+git clone https://github.com/ChamathKB/scheduled_tweets.git
 
-* Configuration
+cd scheduled_tweets
+```
 
-* Database creation
+## Install dependencies
+```
+bundle install
+```
 
-* Database initialization
+## Database migrations
+```
+rails db:create && rails db:migrate
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run app - development mode
+```
+rails start
+```
+opens in http://localhost:3000/ 
